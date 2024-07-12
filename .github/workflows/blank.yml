@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+https://download6.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiM2tzZnZjamU2Zzk0MDVvN3dldTZ5bTNpIiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQ2LmxsYW1hbWV0YS5uZXRcLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MjA4MzQ2MjR9fX1dfQ__&Signature=YEiZasDuT0J4Y7QPSsUe-j0uFdb51dDUoCfN5uxw8dMlBwWzalPGXB03CHxOci5wQvKKCGUdEUfLIWGf3nVYhkdaBHBxOPx82t-jIhVq5hLbpvx93l2pT0RL2mUmSydgRzFMUnOmoDm6-wZKh3xgq4keBE%7EUYTtWTRIn0c7Pql%7Eu514maWJOHx6TJ1Fl%7Eke%7EX%7EX6WrLJsVgxX7PA6TUXbM7fqYkzD4czXozIFKahOOaFMla8nwNqq6v3K30LA2sM-IVO4qI1AMscCdVG88-fo05b6TjOrzoiRope091bU-CGgDb3gml4XYRtsj8eJ%7EQOUN0fj4De3SEYPidBYuxEFw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=1179655686710152
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
